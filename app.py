@@ -12,10 +12,10 @@ from datetime import datetime
 def load_questions():
     # Make sure this matches your exact filename in GitHub!
     try:
-        with open('2025.json', 'r', encoding='utf-8') as f:
+        with open('exam_formatted_game.json', 'r', encoding='utf-8') as f:
             return json.load(f)
     except FileNotFoundError:
-        st.error("Error: '2025.json' not found.")
+        st.error("Error: 'exam_formatted_game.json' not found.")
         return []
 
 def generate_save_code():
@@ -414,3 +414,5 @@ elif st.session_state.quiz_finished:
                 note = st.session_state.notes.get(i, "")
                 if note.strip() != "":
                     st.warning(f"**Your Notes:**\n\n{note}")
+
+
